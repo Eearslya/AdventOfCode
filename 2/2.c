@@ -28,6 +28,7 @@ int main(void) {
 	}
 	printf("Part One Solution: %d\n", paper);
 	printf("Part Two Solution: %d\n", ribbon);
+	fclose(input);
 	return EXIT_SUCCESS;
 }
 
