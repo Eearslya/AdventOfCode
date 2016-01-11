@@ -14,7 +14,7 @@ unsigned char weapons[][3] = {
 	{10, 5, 0}, // Shortsword
 	{25, 6, 0}, // Warhammer
 	{40, 7, 0}, // Longsword
-	{74, 8, 9}  // Greataxe
+	{74, 8, 0}  // Greataxe
 };
 unsigned int weapon_count = sizeof(weapons) / sizeof(weapons[0]);
 unsigned char armors[][3] = {
