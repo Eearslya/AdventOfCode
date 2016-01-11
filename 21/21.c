@@ -36,8 +36,6 @@ unsigned char rings[][3] = {
 unsigned int ring_count = sizeof(rings) / sizeof(rings[0]);
 
 int main(void) {
-	const unsigned int boss_damage = 8;
-	const unsigned int boss_armor = 2;
 	unsigned int i, j, k, l; // Weapon, Armor, Ring loop counters
 	unsigned int cost, damage, armor, turn, leastgold, mostgold;
 	leastgold = -1; // Set to max unsigned int value for later comparisons
@@ -70,7 +68,7 @@ int main(void) {
 					int boss_health = BOSS_HEALTH;
 					while (1) {
 						if (turn == 0) { // Player's turn
-							boss_health -= (damage - boss_armor);
+							boss_health -= (damage - BOSS_ARMOR);
 							if (boss_health <= 0) { // We won!
 								if (cost < leastgold) leastgold = cost;
 								break;
@@ -78,7 +76,7 @@ int main(void) {
 							turn = 1;
 						}
 						else { // Boss turn
-							health -= (boss_damage - armor);
+							health -= (BOSS_DAMAGE - armor);
 							if (health <= 0) { // We lost..
 								if (cost > mostgold) mostgold = cost;
 								break;
