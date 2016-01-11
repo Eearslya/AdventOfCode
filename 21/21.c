@@ -45,7 +45,7 @@ int main(void) {
 		for (j=0; j <= armor_count; j++) {
 			for (k=0; k <= ring_count; k++) {
 				for (l=0; l <= ring_count; l++) {
-					if (k == l && k != 0) continue; // Can't have two rings be the same, but can have both no rings
+					if (k == l && k != ring_count) continue; // Can't have two rings be the same, but can have both no rings
 					cost = weapons[i][ATTR_COST];
 					damage = weapons[i][ATTR_DAMAGE];
 					armor = 0;
