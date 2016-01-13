@@ -29,7 +29,7 @@ int main(void) {
 	max_distance = 0;
 	city_count = 0;
 	// Initialize our struct arrays
-	for (i=0; i < NUM_CITIES; i++) bzero((void*)&cities, sizeof(cities));
+	bzero((void*)&cities, sizeof(cities));
 	// Populate our arrays
 	while (1) {
 		int tmp = fscanf(input, "%s to %s = %d", from, to, &distance);
