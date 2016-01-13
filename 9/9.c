@@ -29,14 +29,15 @@ int main(void) {
 	max_distance = 0;
 	city_count = 0;
 	// Initialize our struct arrays
-	for (i=0; i < NUM_CITIES; i++) {
+	for (i=0; i < NUM_CITIES; i++) bzero((void*)&cities, sizeof(cities));
+/*	for (i=0; i < NUM_CITIES; i++) {
 		cities[i].name = NULL;
 		cities[i].path_count = 0;
 		for (j=0; j < NUM_PATHS; j++) {
 			cities[i].paths[j].to = 0;
 			cities[i].paths[j].distance = 0;
 		}
-	}
+		}*/
 	// Populate our arrays
 	while (1) {
 		int tmp = fscanf(input, "%s to %s = %d", from, to, &distance);
